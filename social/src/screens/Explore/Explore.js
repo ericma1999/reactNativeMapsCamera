@@ -5,7 +5,8 @@ import {
     TextInput,
     Dimensions,
     StyleSheet,
-    TouchableHighlight
+    TouchableHighlight,
+    Text
 } from 'react-native'
 
 import Icon from 'react-native-vector-icons/Feather'
@@ -45,6 +46,8 @@ const styles = StyleSheet.create({
         height: Platform.OS === 'ios' ? 30 : 50,
     }
 })
+
+
 export default class Explore extends Component {
     static navigatorStyle = {
         navBarHidden: true
@@ -52,6 +55,12 @@ export default class Explore extends Component {
 
     constructor(props) {
         super(props);
+    }
+
+    onCameraPress = () => {
+        this.props.navigator.push({
+            screen: "social.CameraScreen"
+        })
     }
 
     render() {
@@ -69,7 +78,7 @@ export default class Explore extends Component {
                 }}>
             </MapView>
             <View pointerEvents='box-none' style={styles.buttonsContainer}>
-                <TouchableHighlight style={styles.button}>
+                <TouchableHighlight style={styles.button} onPress={this.onCameraPress}>
                     <Icon name="camera" size={35}/>
                 </TouchableHighlight>
                 <TouchableHighlight style={styles.button}>

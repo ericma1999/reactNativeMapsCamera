@@ -56,6 +56,7 @@
 		321ACD0821801C9F0060556D /* AIRGoogleMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 321ACCF121801C9F0060556D /* AIRGoogleMap.m */; };
 		321ACD0921801C9F0060556D /* AIRGoogleMapPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 321ACCF521801C9F0060556D /* AIRGoogleMapPolygon.m */; };
 		321ACD0A21801C9F0060556D /* AIRGMSMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 321ACCF621801C9F0060556D /* AIRGMSMarker.m */; };
+		322754072180825800E7B82B /* libReactNativeCameraKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 322754032180824600E7B82B /* libReactNativeCameraKit.a */; };
 		3256B20C217FED15000FFA67 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3256B20B217FED06000FFA67 /* libReactNativeNavigation.a */; };
 		3256B20E217FF052000FFA67 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3256B20D217FF052000FFA67 /* Feather.ttf */; };
 		3256B218217FF08F000FFA67 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3256B215217FF080000FFA67 /* libRNVectorIcons.a */; };
@@ -214,6 +215,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
+		};
+		322754022180824600E7B82B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 322753D82180824600E7B82B /* ReactNativeCameraKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2646934E1CFB2A6B00F3A740;
+			remoteInfo = ReactNativeCameraKit;
 		};
 		3256B20A217FED06000FFA67 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -432,6 +440,7 @@
 		321ACCF521801C9F0060556D /* AIRGoogleMapPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIRGoogleMapPolygon.m; sourceTree = "<group>"; };
 		321ACCF621801C9F0060556D /* AIRGMSMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIRGMSMarker.m; sourceTree = "<group>"; };
 		321ACCF721801C9F0060556D /* DummyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyView.h; sourceTree = "<group>"; };
+		322753D82180824600E7B82B /* ReactNativeCameraKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeCameraKit.xcodeproj; path = "../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit.xcodeproj"; sourceTree = "<group>"; };
 		3256B1E1217FED06000FFA67 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		3256B20D217FF052000FFA67 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		3256B20F217FF080000FFA67 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
@@ -459,6 +468,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322754072180825800E7B82B /* libReactNativeCameraKit.a in Frameworks */,
 				3216CAC321801F0700E9DA11 /* libAirMaps.a in Frameworks */,
 				327861D921801815008C46C8 /* GoogleMapsBase.framework in Frameworks */,
 				3256B218217FF08F000FFA67 /* libRNVectorIcons.a in Frameworks */,
@@ -682,6 +692,14 @@
 			path = "../node_modules/react-native-maps/lib/ios/AirGoogleMaps";
 			sourceTree = "<group>";
 		};
+		322753D92180824600E7B82B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				322754032180824600E7B82B /* libReactNativeCameraKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3256B1E2217FED06000FFA67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -728,6 +746,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				322753D82180824600E7B82B /* ReactNativeCameraKit.xcodeproj */,
 				327861D2218017CF008C46C8 /* AirMaps.xcodeproj */,
 				3256B20F217FF080000FFA67 /* RNVectorIcons.xcodeproj */,
 				3256B1E1217FED06000FFA67 /* ReactNativeNavigation.xcodeproj */,
@@ -957,6 +976,10 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = 322753D92180824600E7B82B /* Products */;
+					ProjectRef = 322753D82180824600E7B82B /* ReactNativeCameraKit.xcodeproj */;
+				},
+				{
 					ProductGroup = 3256B1E2217FED06000FFA67 /* Products */;
 					ProjectRef = 3256B1E1217FED06000FFA67 /* ReactNativeNavigation.xcodeproj */;
 				},
@@ -1107,6 +1130,13 @@
 			fileType = archive.ar;
 			path = "libprivatedata-tvOS.a";
 			remoteRef = 2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		322754032180824600E7B82B /* libReactNativeCameraKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeCameraKit.a;
+			remoteRef = 322754022180824600E7B82B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		3256B20B217FED06000FFA67 /* libReactNativeNavigation.a */ = {

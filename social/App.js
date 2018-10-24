@@ -1,9 +1,9 @@
-import {Platform, StyleSheet, Text, View} from 'react-native';
 import {Navigation} from 'react-native-navigation'
 import Icon from 'react-native-vector-icons/Feather'
 
 import Explore from "./src/screens/Explore/Explore"
 import Profile from "./src/screens/Profile/Profile"
+import Camera from "./src/screens/Camera/Camera"
 
 Navigation.registerComponent(
   "social.ExploreScreen",
@@ -13,6 +13,11 @@ Navigation.registerComponent(
 Navigation.registerComponent(
   "social.ProfileScreen",
   () => Profile
+)
+
+Navigation.registerComponent(
+  "social.CameraScreen",
+  () => Camera
 )
 
 export default () => {
