@@ -1,9 +1,18 @@
 import React, {Component} from 'react'
-import {View,Text, Dimensions, StyleSheet} from 'react-native'
+import {
+    View,
+    Platform,
+    TextInput,
+    Dimensions,
+    StyleSheet,
+    TouchableHighlight
+} from 'react-native'
 
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import Icon from 'react-native-vector-icons/Feather'
 
-const { width, height } = Dimensions.get('window');
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps'
+
+const {width, height} = Dimensions.get('window')
 
 const ASPECT_RATIO = width / height;
 const LATITUDE = 37.78825;
@@ -12,31 +21,66 @@ const LATITUDE_DELTA = 0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         flex: 1
+    },
+    button: {
+        marginBottom: 10
+    },
+    buttonsContainer: {
+        position: 'absolute',
+        alignSelf: 'flex-end',
+        top: '50%',
+        right: 10
+    },
+    searchContainer: {
+        position: 'absolute',
+        alignSelf: 'center',
+        marginTop: Platform.OS === 'ios' ? 50 : 30,
+        backgroundColor: 'white'
+    },
+    textInput: {
+        fontSize: 20,
+        width: 250,
+        height: Platform.OS === 'ios' ? 30 : 50,
     }
 })
 export default class Explore extends Component {
     static navigatorStyle = {
         navBarHidden: true
-      };
+    };
 
-      constructor(props) {
-          super(props);
-      }
+    constructor(props) {
+        super(props);
+    }
 
-      render() {
-        return (<MapView
-        provider={PROVIDER_GOOGLE}
-        style={styles.container}
-        initialRegion={{
-          latitude: LATITUDE,
-          longitude: LONGITUDE,
-          latitudeDelta: LATITUDE_DELTA,
-          longitudeDelta: LONGITUDE_DELTA,
-        }}
-      />)
-      }
+    render() {
+
+        return (
+            <View style={styles.container}>
+                <MapView
+                provider={PROVIDER_GOOGLE}
+                style={styles.container}
+                initialRegion={{
+                    latitude: LATITUDE,
+                    longitude: LONGITUDE,
+                    latitudeDelta: LATITUDE_DELTA,
+                    longitudeDelta: LONGITUDE_DELTA
+                }}>
+            </MapView>
+            <View pointerEvents='box-none' style={styles.buttonsContainer}>
+                <TouchableHighlight style={styles.button}>
+                    <Icon name="camera" size={35}/>
+                </TouchableHighlight>
+                <TouchableHighlight style={styles.button}>
+                    <Icon name="camera" size={35}/>
+                </TouchableHighlight>
+            </View>
+            <View style={styles.searchContainer}>
+                <TextInput placeholder={"ajsdasjkd"} style={styles.textInput}/>
+            </View>
+            </View>
+        )
+    }
+
 }
-
-
