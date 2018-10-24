@@ -17,8 +17,8 @@ Navigation.registerComponent(
 
 export default () => {
   Promise.all([
-    Icon.getImageSource('compass',30),
-    Icon.getImageSource('user',30)
+    Icon.getImageSource('compass',35),
+    Icon.getImageSource('user',35)
   ]).then( sources => {
     Navigation.startTabBasedApp({
       tabs: [
