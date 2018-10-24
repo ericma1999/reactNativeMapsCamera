@@ -43,7 +43,7 @@ import java.util.List;
 //     SoLoader.init(this, /* native exopackage */ false);
 //   }
 // }
-
+ import com.oblador.vectoricons.VectorIconsPackage;
  import com.reactnativenavigation.NavigationApplication;
 
  public class MainApplication extends NavigationApplication {
@@ -58,7 +58,7 @@ import java.util.List;
          // Add additional packages you require here
          // No need to add RnnPackage and MainReactPackage
          return Arrays.<ReactPackage>asList(
-             // eg. new VectorIconsPackage()
+             new VectorIconsPackage()
          );
      }
 
