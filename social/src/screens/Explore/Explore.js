@@ -12,6 +12,7 @@ import {
 import Icon from 'react-native-vector-icons/Feather'
 
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps'
+import {Navigation} from 'react-native-navigation'
 
 const {width, height} = Dimensions.get('window')
 
@@ -38,12 +39,17 @@ const styles = StyleSheet.create({
         position: 'absolute',
         alignSelf: 'center',
         marginTop: Platform.OS === 'ios' ? 50 : 30,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        borderRadius: 50,
+        paddingTop: 5,
+        paddingBottom:5
     },
     textInput: {
-        fontSize: 20,
+        fontSize: 18,
         width: 250,
         height: Platform.OS === 'ios' ? 30 : 50,
+        paddingLeft:15
+
     }
 })
 
@@ -58,8 +64,23 @@ export default class Explore extends Component {
     }
 
     onCameraPress = () => {
+        // Navigation.startSingleScreenApp({
+        //     screen: {
+        //         screen: 'social.CameraScreen',
+        //         navigatorStyle: {
+        //             navBarHidden: true,
+        //             drawUnderNavBar: true,
+        //             navBarTranslucent: true,
+        //             drawUnderTabBar: true,
+        //             statusBarColor: 'transparent',
+        //             drawUnderStatusBar: true
+        //         },
+        //     }
+
+        // })
+
         this.props.navigator.push({
-            screen: "social.CameraScreen"
+            screen: 'social.CameraScreen'
         })
     }
 

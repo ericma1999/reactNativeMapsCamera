@@ -35,7 +35,13 @@ export default () => {
           screen: 'social.ProfileScreen',
           icon: sources[1]
         }
-      ]
+      ],
+      appStyle: {
+        statusBarColor: 'transparent',
+        drawUnderStatusBar: true,
+        navBarHidden: true
+      },
+      passProps: {}
     })
   })
 }

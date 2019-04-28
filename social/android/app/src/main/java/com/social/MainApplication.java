@@ -47,6 +47,7 @@ import java.util.List;
  import com.reactnativenavigation.NavigationApplication;
 
  import com.airbnb.android.react.maps.MapsPackage;
+ import com.wix.RNCameraKit.RNCameraKitPackage;
 
  public class MainApplication extends NavigationApplication {
 
@@ -61,7 +62,8 @@ import java.util.List;
          // No need to add RnnPackage and MainReactPackage
          return Arrays.<ReactPackage>asList(
              new VectorIconsPackage(),
-             new MapsPackage()
+             new MapsPackage(),
+             new RNCameraKitPackage()
          );
      }
 
